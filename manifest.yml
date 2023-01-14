@@ -1,0 +1,20 @@
+modules:
+  jira:issuePanel:
+    - key: pargolf-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: ParGolfIssue
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/issue-panel/build
+app:
+  id: ari:cloud:ecosystem::app/0826518d-129b-489a-a0df-90f6a7777675
+permissions:
+  scopes:
+    - read:jira-work
